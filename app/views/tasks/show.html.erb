@@ -1,0 +1,6 @@
+<h2>Task</h2>
+
+<div><ul><%= @task.details %></ul></div>
+<input type="checkbox" value="1" checked="checked" name="task[completed]" id="task_completed">
+<div><%= link_to 'Edit', edit_task_path %></div>
+<div><%= link_to 'Back to list', tasks_path %></div>
