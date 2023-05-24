@@ -1,6 +1,16 @@
-<h2>Task</h2>
-
-<div><ul><%= @task.details %></ul></div>
-<input type="checkbox" value="1" checked="checked" name="task[completed]" id="task_completed">
+<div class="container d-flex text-center">
+<div class="row align-items-start">
+<h2>My task</h2>
+<h3><%= @task.title %></h3>
+<div><ul>
+  <%= @task.details %>
+  <%= form_with model: @task do |f| %>
+    <%= f.label :completed %>
+    <%= f.check_box :completed %>
+  <% end %>
+</ul>
+</div>
 <div><%= link_to 'Edit', edit_task_path %></div>
 <div><%= link_to 'Back to list', tasks_path %></div>
+</div>
+</div>
